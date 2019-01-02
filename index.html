@@ -6,17 +6,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<btn class="btn ripple"></btn>
+<div class="container">
+  <btn class="btn ripple">text</btn>
+</div>
 <script src="index.js"></script>
 <style>
-  .btn {
-    padding:40px;
-    border-radius:4px;
+  .container{
     position: absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    background:#dedede;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .btn {
+    padding: 30px;
+    border-radius: 4px;
+    background: #dedede;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
   }
 </style>

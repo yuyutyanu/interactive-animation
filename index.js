@@ -1,11 +1,13 @@
 /* ripple effect */
 
 const RippleEffect = function(e){
+  e.stopPropagation();
   const ripple = this;
   const cover = document.createElement('span')
-  const x = e.layerX
-  const y = e.layerY
   const size = ripple.offsetWidth;
+  const loc = ripple.getBoundingClientRect()
+  const x = e.pageX - loc.left - window.pageXOffset - (size / 2);
+  const y = e.pageY - loc.top - window.pageYOffset - (size / 2);
   const style = 'top:' + y + 'px; ' +
                 'left:' + x + 'px; ' +
                 'height:' + size + 'px; ' +
